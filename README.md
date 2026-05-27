@@ -1,84 +1,46 @@
-# Project Structure
+# FishID 🐟
 
-This project follows a standard data science layout to keep code, data, and results organized.
+An image classification model that identifies fish species from photos using deep learning. Built with PyTorch and EfficientNet, trained on a labeled dataset of 9,000 images across 9 species, tracked with MLflow, and deployed as a REST API via FastAPI.
 
-## Folder Overview
+## Species
+- Black Sea Sprat
+- Gilt-Head Bream
+- Hourse Mackerel
+- Red Mullet
+- Red Sea Bream
+- Sea Bass
+- Shrimp
+- Striped Red Mullet
+- Trout
 
-### `data/`
-Stores all datasets.
+## Tech Stack
+- **Model:** PyTorch + EfficientNet (transfer learning)
+- **Experiment Tracking:** MLflow
+- **Data Storage:** AIStor (S3-compatible object storage)
+- **Deployment:** FastAPI + Docker
+- **Environment:** Python 3.11, Conda
 
-- `raw/` → original data (never modified)
-- `processed/` → cleaned and transformed data
-- `external/` → third-party datasets
+## Project Structure
+fishid/
+├── notebooks/        # EDA, preprocessing, training, evaluation
+├── src/              # reusable modules
+├── configs/          # hyperparameters and model configs
+├── models/           # saved model checkpoints
+├── outputs/          # charts, plots, evaluation results
+└── data/             # local data (not committed)
 
-Purpose: keep input data separate from code and results.
+## Setup
+```bash
+conda env create -f environment.yml
+conda activate datascience
+```
 
----
+## Notebooks
+- `01_eda.ipynb` → dataset exploration and visualization
+- `02_preprocessing.ipynb` → data pipeline and transforms
+- `03_training.ipynb` → model training with MLflow tracking
+- `04_evaluation.ipynb` → model evaluation and metrics
+- `05_inference.ipynb` → inference and deployment prep
 
-### `notebooks/`
-Contains Jupyter notebooks for exploration and experimentation.
-
-Used for:
-- data analysis (EDA)
-- visualization
-- model testing
-- quick experiments
-
-Note: notebooks are for experimentation, not production code.
-
----
-
-### `src/`
-Reusable Python code used across the project.
-
-Contains:
-- data cleaning functions
-- feature engineering
-- training scripts
-- utility functions
-
-Purpose: keep logic modular and avoid duplication.
-
----
-
-### `models/`
-Stores trained machine learning models.
-
-Examples:
-- saved `.pkl` or `.joblib` models
-- exported model files
-
-Purpose: reuse models for inference or deployment.
-
----
-
-### `outputs/`
-Stores generated results.
-
-Examples:
-- charts and plots
-- reports
-- prediction files
-- evaluation results
-
-Purpose: reproducible outputs from analysis and modeling.
-
----
-
-## Workflow
-
-1. Data is placed in `data/raw/`
-2. Cleaning and transformation is done via `src/`
-3. Exploration and experimentation happen in `notebooks/`
-4. Trained models are saved in `models/`
-5. Results and exports go to `outputs/`
-
----
-
-## Summary
-
-- `data/` → input
-- `notebooks/` → exploration
-- `src/` → reusable code
-- `models/` → trained models
-- `outputs/` → results
+## License
+MIT
