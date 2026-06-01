@@ -21,6 +21,7 @@ An image classification model that identifies fish species from photos using dee
 - **Environment:** Python 3.11, Conda
 
 ## Project Structure
+```b
 fishid/
 ├── notebooks/        # EDA, preprocessing, training, evaluation
 ├── src/              # reusable modules
@@ -28,6 +29,7 @@ fishid/
 ├── models/           # saved model checkpoints
 ├── outputs/          # charts, plots, evaluation results
 └── data/             # local data (not committed)
+```
 
 ## Setup
 ```bash
