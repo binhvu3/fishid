@@ -21,7 +21,7 @@ An image classification model that identifies fish species from photos using dee
 - **Environment:** Python 3.11, Conda
 
 ## Project Structure
-```
+```text
 fishid/
 ├── notebooks/        # EDA, preprocessing, training, evaluation
 ├── src/              # reusable modules
@@ -46,21 +46,35 @@ conda activate datascience
 
 ## Run Locally
 ```bash
-cd src
 uvicorn src.app:app --reload --port 8000
 ```
 
 ## Docker
 
-### Build
+### Push to DockerHub
+```bash
+docker login
+docker tag fishid binhvu3/fishid:latest
+docker push binhvu3/fishid:latest
+```
+
+### Pull from DockerHub
+```bash
+docker pull binhvu3/fishid:latest
+```
+
+### Build Locally
 ```bash
 docker build -t fishid .
 ```
 
 ### Run
 ```bash
-docker run -p 8000:8000 fishid
+docker run -p 8000:8000 binhvu3/fishid:latest
 ```
+
+## DockerHub
+[https://hub.docker.com/r/binhvu3/fishid](https://hub.docker.com/r/binhvu3/fishid)
 
 ## API Routes
 
@@ -86,4 +100,3 @@ curl -X POST "http://localhost:8000/predict" \
 
 ## License
 MIT
-```
