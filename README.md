@@ -1,4 +1,3 @@
-```markdown
 # FishID 🐟
 
 An image classification model that identifies fish species from photos using deep learning. Built with PyTorch and EfficientNet, trained on a labeled dataset of 9,000 images across 9 species, tracked with MLflow, and deployed as a REST API via FastAPI.
