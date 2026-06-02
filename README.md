@@ -47,7 +47,7 @@ conda activate datascience
 ## Run Locally
 ```bash
 cd src
-uvicorn app:app --reload --port 8000
+uvicorn src.app:app --reload --port 8000
 ```
 
 ## Docker
