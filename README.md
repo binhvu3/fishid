@@ -2,16 +2,24 @@
 
 **Fish species classifier — upload a photo, get an ID.**
 
+![Status](https://img.shields.io/badge/status-live-brightgreen?style=flat)
+![License](https://img.shields.io/badge/license-MIT-blue?style=flat)
+![Docker Pulls](https://img.shields.io/docker/pulls/binhvu3/fishid?style=flat)
+
 🌐 **[Try it live → fishid.binhtvu.com](https://fishid.binhtvu.com)**
 
 99.26% test accuracy across 9 species. Built with PyTorch + EfficientNet, served via FastAPI, deployed on self-hosted infrastructure with Cloudflare.
 
 ---
 
-## Species
-Black Sea Sprat · Gilt-Head Bream · Hourse Mackerel · Red Mullet · Red Sea Bream · Sea Bass · Shrimp · Striped Red Mullet · Trout
-
 ## Tech Stack
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Python](https://img.shields.io/badge/Python_3.11-3776AB?style=flat&logo=python&logoColor=white)
+![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat&logo=mlflow&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat&logo=cloudflare&logoColor=white)
+
 | Component | Tool |
 |---|---|
 | Model | PyTorch + EfficientNet-B0 |
@@ -19,6 +27,9 @@ Black Sea Sprat · Gilt-Head Bream · Hourse Mackerel · Red Mullet · Red Sea B
 | Data Storage | AIStor (S3-compatible) |
 | API | FastAPI |
 | Deployment | Docker + Cloudflare Tunnel |
+
+## Species
+Black Sea Sprat · Gilt-Head Bream · Hourse Mackerel · Red Mullet · Red Sea Bream · Sea Bass · Shrimp · Striped Red Mullet · Trout
 
 ## Quick Start
 
