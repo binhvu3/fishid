@@ -5,14 +5,28 @@ import torch.nn as nn
 import torchvision.transforms as transforms
 import torchvision.models as models
 from PIL import Image
-from fastapi import FastAPI, UploadFile, File
-from fastapi.responses import JSONResponse
-from dotenv import load_dotenv
 from pathlib import Path
+from fastapi import FastAPI, UploadFile, File
+from fastapi.responses import JSONResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
 
-load_dotenv(Path("../.env"))
+load_dotenv()
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+os.environ["PYTORCH_DISABLE_NNPACK"] = "1"
 
 app = FastAPI(title="FishID API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.mount("/samples", StaticFiles(directory=str(BASE_DIR / "src/samples")), name="samples")
 
 classes = [
     "Black Sea Sprat",
@@ -26,11 +40,10 @@ classes = [
     "Trout"
 ]
 
-device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+device = torch.device("cpu")
 
 model = models.efficientnet_b0(weights=None)
 model.classifier[1] = nn.Linear(model.classifier[1].in_features, len(classes))
-BASE_DIR = Path(__file__).resolve().parent.parent
 model.load_state_dict(torch.load(BASE_DIR / "models/efficientnet_b0_fish.pth", map_location=device))
 model = model.to(device)
 model.eval()
@@ -43,8 +56,13 @@ inference_transform = transforms.Compose([
 ])
 
 @app.get("/")
-def root():
-    return {"message": "FishID API is running"}
+def ui():
+    return FileResponse(BASE_DIR / "src/index.html")
+
+@app.get("/samples-list")
+def samples_list():
+    samples_dir = BASE_DIR / "src/samples"
+    return {"samples": [f.name for f in samples_dir.iterdir() if f.is_file()]}
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):

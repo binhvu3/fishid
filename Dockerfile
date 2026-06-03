@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY src/ ./src/
 COPY models/ ./models/
-COPY .env .
 
 RUN pip install --no-cache-dir \
     torch torchvision --index-url https://download.pytorch.org/whl/cpu
