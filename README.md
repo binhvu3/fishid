@@ -20,13 +20,7 @@
 ![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat&logo=mlflow&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat&logo=cloudflare&logoColor=white)
 
-| Component | Tool |
-|---|---|
-| Model | PyTorch + EfficientNet-B0 |
-| Experiment Tracking | MLflow |
-| Data Storage | AIStor (S3-compatible) |
-| API | FastAPI |
-| Deployment | Docker + Cloudflare Tunnel |
+![System Architecture](outputs/system_diagram/fishid_system_architecture_general.svg)
 
 ## Species
 Black Sea Sprat · Gilt-Head Bream · Hourse Mackerel · Red Mullet · Red Sea Bream · Sea Bass · Shrimp · Striped Red Mullet · Trout
