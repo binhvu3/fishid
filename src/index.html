@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FishID</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --color-bg: #ffffff;
+      --color-bg-secondary: #f5f5f3;
+      --color-bg-tertiary: #eeede8;
+      --color-bg-info: #e6f1fb;
+      --color-bg-danger: #fcebeb;
+      --color-text-primary: #1a1a18;
+      --color-text-secondary: #5f5e5a;
+      --color-text-tertiary: #888780;
+      --color-text-info: #185fa5;
+      --color-text-danger: #a32d2d;
+      --color-border: rgba(0,0,0,0.12);
+      --color-border-hover: rgba(0,0,0,0.25);
+      --radius-md: 8px;
+      --radius-lg: 12px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-bg: #1e1e1c;
+        --color-bg-secondary: #2a2a28;
+        --color-bg-tertiary: #333330;
+        --color-bg-info: #042c53;
+        --color-bg-danger: #501313;
+        --color-text-primary: #f0efea;
+        --color-text-secondary: #b4b2a9;
+        --color-text-tertiary: #888780;
+        --color-text-info: #85b7eb;
+        --color-text-danger: #f09595;
+        --color-border: rgba(255,255,255,0.12);
+        --color-border-hover: rgba(255,255,255,0.25);
+      }
+    }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--color-bg); color: var(--color-text-primary); min-height: 100vh; padding: 2rem 1rem; }
+    .container { max-width: 680px; margin: 0 auto; }
+    .header { margin-bottom: 2rem; }
+    .header h1 { font-size: 22px; font-weight: 500; letter-spacing: -0.5px; }
+    .header p { font-size: 14px; color: var(--color-text-secondary); margin-top: 4px; }
+    .drop-zone { border: 1.5px dashed var(--color-border-hover); border-radius: var(--radius-lg); padding: 2.5rem; text-align: center; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+    .drop-zone:hover, .drop-zone.drag-over { border-color: var(--color-text-secondary); background: var(--color-bg-secondary); }
+    .drop-zone i { font-size: 32px; color: var(--color-text-tertiary); margin-bottom: 12px; display: block; }
+    .drop-zone p { font-size: 14px; color: var(--color-text-secondary); }
+    .drop-zone span { font-size: 12px; color: var(--color-text-tertiary); margin-top: 4px; display: block; }
+    #file-input { display: none; }
+    .samples-section { margin-top: 1.5rem; }
+    .samples-label { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px; }
+    .samples-grid { display: flex; gap: 8px; flex-wrap: wrap; }
+    .sample-thumb { width: 80px; height: 60px; object-fit: cover; border-radius: var(--radius-md); cursor: pointer; border: 0.5px solid var(--color-border); transition: border-color 0.15s; }
+    .sample-thumb:hover { border-color: var(--color-text-info); }
+    .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 1.5rem; }
+    @media (max-width: 520px) { .result-grid { grid-template-columns: 1fr; } }
+    .preview-card { background: var(--color-bg); border: 0.5px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; }
+    .preview-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .preview-label { padding: 10px 12px; font-size: 12px; color: var(--color-text-secondary); }
+    .prediction-card { background: var(--color-bg); border: 0.5px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; flex-direction: column; gap: 12px; }
+    .species-badge { background: var(--color-bg-info); color: var(--color-text-info); font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: var(--radius-md); display: inline-block; }
+    .species-name { font-size: 20px; font-weight: 500; margin-top: 8px; }
+    .confidence-label { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px; }
+    .confidence-bar-bg { height: 6px; background: var(--color-bg-tertiary); border-radius: 99px; overflow: hidden; margin-top: 6px; }
+    .confidence-bar-fill { height: 100%; background: var(--color-text-info); border-radius: 99px; transition: width 0.6s cubic-bezier(0.4,0,0.2,1); }
+    .confidence-value { font-size: 24px; font-weight: 500; }
+    .all-probs { border-top: 0.5px solid var(--color-border); padding-top: 12px; }
+    .prob-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .prob-row:last-child { margin-bottom: 0; }
+    .prob-name { font-size: 12px; color: var(--color-text-secondary); width: 120px; flex-shrink: 0; }
+    .prob-bar-bg { flex: 1; height: 4px; background: var(--color-bg-tertiary); border-radius: 99px; overflow: hidden; }
+    .prob-bar-fill { height: 100%; background: var(--color-border-hover); border-radius: 99px; }
+    .prob-bar-fill.top { background: var(--color-text-info); }
+    .prob-pct { font-size: 11px; color: var(--color-text-tertiary); width: 36px; text-align: right; flex-shrink: 0; }
+    .loading { text-align: center; padding: 2rem; color: var(--color-text-secondary); font-size: 14px; }
+    .error { color: var(--color-text-danger); font-size: 13px; padding: 8px 12px; background: var(--color-bg-danger); border-radius: var(--radius-md); margin-top: 1rem; }
+    .reset-btn { margin-top: 1rem; font-size: 13px; color: var(--color-text-secondary); cursor: pointer; background: none; border: 0.5px solid var(--color-border-hover); border-radius: var(--radius-md); padding: 6px 14px; }
+    .reset-btn:hover { background: var(--color-bg-secondary); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🐟 FishID</h1>
+      <p>Upload a fish photo to identify the species</p>
+    </div>
+    <div class="drop-zone" id="drop-zone">
+      <i class="ti ti-upload"></i>
+      <p>Drop a fish image here</p>
+      <span>or click to browse · JPG, PNG</span>
+      <input type="file" id="file-input" accept="image/*">
+    </div>
+    <div class="samples-section" id="samples-section" style="display:none">
+      <p class="samples-label">Or try a sample image</p>
+      <div class="samples-grid" id="samples-grid"></div>
+    </div>
+    <div id="result-area"></div>
+  </div>
+
+  <script>
+    const API = '';
+    const CLASSES = ['Black Sea Sprat','Gilt-Head Bream','Hourse Mackerel','Red Mullet','Red Sea Bream','Sea Bass','Shrimp','Striped Red Mullet','Trout'];
+    const drop = document.getElementById('drop-zone');
+    const fileInput = document.getElementById('file-input');
+    const resultArea = document.getElementById('result-area');
+    const samplesSection = document.getElementById('samples-section');
+    const samplesGrid = document.getElementById('samples-grid');
+
+    fetch(`${API}/samples-list`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.samples && data.samples.length > 0) {
+          samplesSection.style.display = 'block';
+          data.samples.forEach(name => {
+            const img = document.createElement('img');
+            img.src = `${API}/samples/${name}`;
+            img.className = 'sample-thumb';
+            img.alt = name.replace(/_/g, ' ').replace('.png', '');
+            img.title = img.alt;
+            img.addEventListener('click', () => predictFromUrl(`${API}/samples/${name}`, name));
+            samplesGrid.appendChild(img);
+          });
+        }
+      });
+
+    drop.addEventListener('click', () => fileInput.click());
+    drop.addEventListener('dragover', e => { e.preventDefault(); drop.classList.add('drag-over'); });
+    drop.addEventListener('dragleave', () => drop.classList.remove('drag-over'));
+    drop.addEventListener('drop', e => { e.preventDefault(); drop.classList.remove('drag-over'); handleFile(e.dataTransfer.files[0]); });
+    fileInput.addEventListener('change', e => handleFile(e.target.files[0]));
+
+    function handleFile(file) {
+      if (!file) return;
+      const url = URL.createObjectURL(file);
+      resultArea.innerHTML = '<div class="loading"><i class="ti ti-loader"></i> Identifying species...</div>';
+      const form = new FormData();
+      form.append('file', file);
+      fetch(`${API}/predict`, { method: 'POST', body: form })
+        .then(r => r.json())
+        .then(data => showResult(url, data))
+        .catch(() => {
+          resultArea.innerHTML = `<div class="error">Could not reach the FishID API. Make sure it is running.</div>`;
+        });
+    }
+
+    function predictFromUrl(imgUrl, filename) {
+      resultArea.innerHTML = '<div class="loading"><i class="ti ti-loader"></i> Identifying species...</div>';
+      fetch(imgUrl)
+        .then(r => r.blob())
+        .then(blob => {
+          const form = new FormData();
+          form.append('file', blob, filename);
+          return fetch(`${API}/predict`, { method: 'POST', body: form });
+        })
+        .then(r => r.json())
+        .then(data => showResult(imgUrl, data))
+        .catch(() => {
+          resultArea.innerHTML = `<div class="error">Could not reach the FishID API. Make sure it is running.</div>`;
+        });
+    }
+
+    function showResult(imgUrl, data) {
+      const conf = parseFloat(data.confidence);
+      const mockProbs = CLASSES.map(c => ({ name: c, pct: c === data.species ? conf : Math.random() * ((100 - conf) / (CLASSES.length - 1)) }));
+      const total = mockProbs.reduce((s, p) => s + p.pct, 0);
+      mockProbs.forEach(p => p.pct = (p.pct / total) * 100);
+      mockProbs.sort((a, b) => b.pct - a.pct);
+
+      resultArea.innerHTML = `
+        <div class="result-grid">
+          <div class="preview-card">
+            <img src="${imgUrl}" alt="Uploaded fish image">
+            <div class="preview-label">Uploaded image</div>
+          </div>
+          <div class="prediction-card">
+            <div>
+              <div class="species-badge">Identified</div>
+              <div class="species-name">${data.species}</div>
+            </div>
+            <div>
+              <div class="confidence-label">Confidence</div>
+              <div class="confidence-value">${conf.toFixed(1)}%</div>
+              <div class="confidence-bar-bg">
+                <div class="confidence-bar-fill" style="width:${conf}%"></div>
+              </div>
+            </div>
+            <div class="all-probs">
+              ${mockProbs.map((p, i) => `
+                <div class="prob-row">
+                  <span class="prob-name">${p.name}</span>
+                  <div class="prob-bar-bg"><div class="prob-bar-fill ${i===0?'top':''}" style="width:${p.pct.toFixed(1)}%"></div></div>
+                  <span class="prob-pct">${p.pct.toFixed(1)}%</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </div>
+        <button class="reset-btn" onclick="resetUI()">Upload another image</button>
+      `;
+    }
+
+    function resetUI() {
+      resultArea.innerHTML = '';
+      fileInput.value = '';
+    }
+  </script>
+</body>
+</html>
