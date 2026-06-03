@@ -1,45 +1,50 @@
 # FishID 🐟
 
-## Live Demo
-[https://fishid.binhtvu.com](https://fishid.binhtvu.com)
+**Fish species classifier — upload a photo, get an ID.**
 
-## API Docs
-[https://fishid.binhtvu.com/docs](https://fishid.binhtvu.com/docs)
+🌐 **[Try it live → fishid.binhtvu.com](https://fishid.binhtvu.com)**
 
-### Health Check
-```bash
-curl https://fishid.binhtvu.com/health
-```
+99.26% test accuracy across 9 species. Built with PyTorch + EfficientNet, served via FastAPI, deployed on self-hosted infrastructure with Cloudflare.
 
-An image classification model that identifies fish species from photos using deep learning. Built with PyTorch and EfficientNet, trained on a labeled dataset of 9,000 images across 9 species, tracked with MLflow, and deployed as a REST API via FastAPI.
+---
 
 ## Species
-- Black Sea Sprat
-- Gilt-Head Bream
-- Hourse Mackerel
-- Red Mullet
-- Red Sea Bream
-- Sea Bass
-- Shrimp
-- Striped Red Mullet
-- Trout
+Black Sea Sprat · Gilt-Head Bream · Hourse Mackerel · Red Mullet · Red Sea Bream · Sea Bass · Shrimp · Striped Red Mullet · Trout
 
 ## Tech Stack
-- **Model:** PyTorch + EfficientNet (transfer learning)
-- **Experiment Tracking:** MLflow
-- **Data Storage:** AIStor (S3-compatible object storage)
-- **Deployment:** FastAPI + Docker
-- **Environment:** Python 3.11, Conda
+| Component | Tool |
+|---|---|
+| Model | PyTorch + EfficientNet-B0 |
+| Experiment Tracking | MLflow |
+| Data Storage | AIStor (S3-compatible) |
+| API | FastAPI |
+| Deployment | Docker + Cloudflare Tunnel |
+
+## Quick Start
+
+```bash
+docker pull binhvu3/fishid:latest
+docker run -p 8000:8000 binhvu3/fishid:latest
+```
+
+```bash
+curl -X POST "http://localhost:8000/predict" \
+  -F "file=@fish.jpg"
+# {"species": "Trout", "confidence": 99.76}
+```
+
+## Links
+- 🌐 [Live Demo](https://fishid.binhtvu.com)
+- 📖 [API Docs](https://fishid.binhtvu.com/docs)
+- 🐳 [DockerHub](https://hub.docker.com/r/binhvu3/fishid)
 
 ## Project Structure
 ```text
 fishid/
-├── notebooks/        # EDA, preprocessing, training, evaluation
-├── src/              # reusable modules
-├── configs/          # hyperparameters and model configs
-├── models/           # saved model checkpoints
-├── outputs/          # charts, plots, evaluation results
-└── data/             # local data (not committed)
+├── notebooks/   # EDA → preprocessing → training → evaluation → inference
+├── src/         # FastAPI app + frontend + sample images
+├── models/      # trained model checkpoints
+└── outputs/     # charts and evaluation results
 ```
 
 ## Setup
@@ -48,70 +53,53 @@ conda env create -f environment.yml
 conda activate datascience
 ```
 
+## Development
+
+### Run Locally
+```bash
+uvicorn src.app:app --reload --port 8000
+```
+
+### Build and Push Multi-Platform Image
+```bash
+# Builds for AMD64 (Proxmox) and ARM64 (Apple Silicon)
+docker buildx create --use
+docker buildx build --platform linux/amd64,linux/arm64 -t binhvu3/fishid:latest --push .
+```
+
+### Build Locally Only
+```bash
+docker build -t fishid .
+docker run -p 8000:8000 fishid
+```
+
+### Test Rate Limiting
+```bash
+python tests/test_rate_limit.py
+```
+
+### Health Check
+```bash
+curl https://fishid.binhtvu.com/health
+```
+
+### API Routes
+```bash
+# Predict
+curl -X POST "https://fishid.binhtvu.com/predict" \
+  -H "accept: application/json" \
+  -F "file=@/path/to/fish.jpg"
+
+# Example response
+# {"species": "Trout", "confidence": 99.76}
+```
+
 ## Notebooks
 - `01_eda.ipynb` → dataset exploration and visualization
 - `02_preprocessing.ipynb` → data pipeline and transforms
 - `03_training.ipynb` → model training with MLflow tracking
 - `04_evaluation.ipynb` → model evaluation and metrics
 - `05_inference.ipynb` → inference and deployment prep
-
-## Run Locally
-```bash
-uvicorn src.app:app --reload --port 8000
-```
-
-## Docker
-
-### Build and Push Multi-Platform Image
-```bash
-# Build for both AMD64 (Intel/Proxmox) and ARM64 (Apple Silicon) and push to DockerHub
-docker buildx create --use
-docker buildx build --platform linux/amd64,linux/arm64 -t binhvu3/fishid:latest --push .
-```
-
-### Pull from DockerHub
-```bash
-docker pull binhvu3/fishid:latest
-```
-
-## DockerHub
-[https://hub.docker.com/r/binhvu3/fishid](https://hub.docker.com/r/binhvu3/fishid)
-```
-
-### Build Locally
-```bash
-docker build -t fishid .
-```
-
-### Run
-```bash
-docker run -p 8000:8000 binhvu3/fishid:latest
-```
-
-## DockerHub
-[https://hub.docker.com/r/binhvu3/fishid](https://hub.docker.com/r/binhvu3/fishid)
-
-## API Routes
-
-### Health Check
-```bash
-curl http://localhost:8000/
-```
-
-### Predict Fish Species
-```bash
-curl -X POST "http://localhost:8000/predict" \
-  -H "accept: application/json" \
-  -F "file=@$(pwd)/data/external/uploaded_fish.png"
-```
-
-### Example Response
-```json
-{
-  "species": "Trout",
-  "confidence": 61.61
-}
-```
 
 ## License
 MIT
