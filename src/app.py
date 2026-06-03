@@ -6,18 +6,24 @@ import torchvision.transforms as transforms
 import torchvision.models as models
 from PIL import Image
 from pathlib import Path
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, UploadFile, File, Request
 from fastapi.responses import JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 
+os.environ["PYTORCH_DISABLE_NNPACK"] = "1"
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-os.environ["PYTORCH_DISABLE_NNPACK"] = "1"
 
+limiter = Limiter(key_func=get_remote_address)
 app = FastAPI(title="FishID API")
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
@@ -65,7 +71,8 @@ def samples_list():
     return {"samples": [f.name for f in samples_dir.iterdir() if f.is_file()]}
 
 @app.post("/predict")
-async def predict(file: UploadFile = File(...)):
+@limiter.limit("10/minute")
+async def predict(request: Request, file: UploadFile = File(...)):
     contents = await file.read()
     img = Image.open(io.BytesIO(contents)).convert('RGB')
     tensor = inference_transform(img).unsqueeze(0).to(device)
