@@ -86,3 +86,7 @@ async def predict(request: Request, file: UploadFile = File(...)):
         "species": classes[predicted.item()],
         "confidence": round(confidence.item() * 100, 2)
     })
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}

@@ -1,5 +1,16 @@
 # FishID 🐟
 
+## Live Demo
+[https://fishid.binhtvu.com](https://fishid.binhtvu.com)
+
+## API Docs
+[https://fishid.binhtvu.com/docs](https://fishid.binhtvu.com/docs)
+
+### Health Check
+```bash
+curl https://fishid.binhtvu.com/health
+```
+
 An image classification model that identifies fish species from photos using deep learning. Built with PyTorch and EfficientNet, trained on a labeled dataset of 9,000 images across 9 species, tracked with MLflow, and deployed as a REST API via FastAPI.
 
 ## Species
@@ -51,16 +62,20 @@ uvicorn src.app:app --reload --port 8000
 
 ## Docker
 
-### Push to DockerHub
+### Build and Push Multi-Platform Image
 ```bash
-docker login
-docker tag fishid binhvu3/fishid:latest
-docker push binhvu3/fishid:latest
+# Build for both AMD64 (Intel/Proxmox) and ARM64 (Apple Silicon) and push to DockerHub
+docker buildx create --use
+docker buildx build --platform linux/amd64,linux/arm64 -t binhvu3/fishid:latest --push .
 ```
 
 ### Pull from DockerHub
 ```bash
 docker pull binhvu3/fishid:latest
+```
+
+## DockerHub
+[https://hub.docker.com/r/binhvu3/fishid](https://hub.docker.com/r/binhvu3/fishid)
 ```
 
 ### Build Locally
@@ -87,7 +102,7 @@ curl http://localhost:8000/
 ```bash
 curl -X POST "http://localhost:8000/predict" \
   -H "accept: application/json" \
-  -F "file=@/path/to/your/fish.jpg"
+  -F "file=@$(pwd)/data/external/uploaded_fish.png"
 ```
 
 ### Example Response
