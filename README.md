@@ -99,12 +99,55 @@ curl -X POST "https://fishid.binhtvu.com/predict" \
 # {"species": "Trout", "confidence": 99.76}
 ```
 
+## Training
+
+### Convert notebook to script
+
+```bash
+cd /workspace/fishid
+jupyter nbconvert --to script notebooks/07_retrain_expanded.ipynb
+```
+
+### Run training in background
+
+```bash
+nohup python notebooks/07_retrain_expanded.py > /workspace/models/training.log 2>&1 &
+echo $! > /workspace/models/training.pid
+echo "Training started with PID: $(cat /workspace/models/training.pid)"
+```
+
+### Monitor progress
+
+```bash
+tail -f /workspace/models/training.log
+```
+
+### Check if still running
+
+```bash
+cat /workspace/models/training.pid | xargs ps -p
+```
+
+### Stop training
+
+```bash
+kill $(cat /workspace/models/training.pid)
+```
+
+### GPU usage
+
+```bash
+watch -n 1 nvidia-smi
+```
+
 ## Notebooks
 - `01_eda.ipynb` → dataset exploration and visualization
 - `02_preprocessing.ipynb` → data pipeline and transforms
 - `03_training.ipynb` → model training with MLflow tracking
 - `04_evaluation.ipynb` → model evaluation and metrics
 - `05_inference.ipynb` → inference and deployment prep
+- `06_data_expansion.ipynb` → iNaturalist dataset download and AIStor upload
+- `07_retrain_expanded.ipynb`and `07_retrain_expanded_cuda.ipynb` → EfficientNet-B4 retraining on 202 Pacific/freshwater species
 
 ## License
 MIT
