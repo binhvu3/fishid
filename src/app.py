@@ -100,3 +100,20 @@ async def predict(request: Request, file: UploadFile = File(...)):
         "confidence": top5[0]["confidence"],
         "top5": top5
     })
+    
+@app.get("/species")
+def species_list():
+    return JSONResponse({
+        "total": num_classes,
+        "species": [
+            {
+                "scientific": cls,
+                "common": class_to_common.get(cls, cls.replace('_', ' '))
+            }
+            for cls in classes
+        ]
+    })
+
+@app.get("/species-page")
+def species_page():
+    return FileResponse(BASE_DIR / "src/species.html")
