@@ -1,9 +1,9 @@
 import io
 import os
+import json
 import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
-import torchvision.models as models
 from PIL import Image
 from pathlib import Path
 from fastapi import FastAPI, UploadFile, File, Request
@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
+import timm
 
 os.environ["PYTORCH_DISABLE_NNPACK"] = "1"
 load_dotenv()
@@ -24,7 +25,6 @@ limiter = Limiter(key_func=get_remote_address)
 app = FastAPI(title="FishID API")
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -34,28 +34,30 @@ app.add_middleware(
 
 app.mount("/samples", StaticFiles(directory=str(BASE_DIR / "src/samples")), name="samples")
 
-classes = [
-    "Black Sea Sprat",
-    "Gilt-Head Bream",
-    "Hourse Mackerel",
-    "Red Mullet",
-    "Red Sea Bream",
-    "Sea Bass",
-    "Shrimp",
-    "Striped Red Mullet",
-    "Trout"
-]
-
+# ── Load model ──
 device = torch.device("cpu")
+MODEL_PATH = BASE_DIR / "models/efficientnet_b4_fish_expanded.pth"
 
-model = models.efficientnet_b0(weights=None)
-model.classifier[1] = nn.Linear(model.classifier[1].in_features, len(classes))
-model.load_state_dict(torch.load(BASE_DIR / "models/efficientnet_b0_fish.pth", map_location=device))
+checkpoint = torch.load(MODEL_PATH, map_location=device)
+classes = checkpoint['classes']
+num_classes = checkpoint['num_classes']
+
+model = timm.create_model('efficientnet_b4', pretrained=False, num_classes=num_classes)
+model.load_state_dict(checkpoint['model_state_dict'])
 model = model.to(device)
 model.eval()
 
+# ── Load common name mapping ──
+CLASS_MAP_PATH = BASE_DIR / "models/class_to_common.json"
+if CLASS_MAP_PATH.exists():
+    with open(CLASS_MAP_PATH) as f:
+        class_to_common = json.load(f)
+else:
+    class_to_common = {}
+
+# ── Transforms ──
 inference_transform = transforms.Compose([
-    transforms.Resize((224, 224)),
+    transforms.Resize((380, 380)),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406],
                          std=[0.229, 0.224, 0.225])
@@ -64,6 +66,10 @@ inference_transform = transforms.Compose([
 @app.get("/")
 def ui():
     return FileResponse(BASE_DIR / "src/index.html")
+
+@app.get("/health")
+def health():
+    return {"status": "ok", "model": "efficientnet_b4", "classes": num_classes}
 
 @app.get("/samples-list")
 def samples_list():
@@ -80,13 +86,17 @@ async def predict(request: Request, file: UploadFile = File(...)):
     with torch.no_grad():
         outputs = model(tensor)
         probabilities = torch.softmax(outputs, dim=1)
-        confidence, predicted = probabilities.max(1)
+        top5_probs, top5_indices = probabilities.topk(5, dim=1)
+
+    top5 = []
+    for prob, idx in zip(top5_probs[0].tolist(), top5_indices[0].tolist()):
+        scientific = classes[idx]
+        common = class_to_common.get(scientific, scientific.replace('_', ' '))
+        top5.append({"species": common, "scientific": scientific, "confidence": round(prob * 100, 2)})
 
     return JSONResponse({
-        "species": classes[predicted.item()],
-        "confidence": round(confidence.item() * 100, 2)
+        "species": top5[0]["species"],
+        "scientific": top5[0]["scientific"],
+        "confidence": top5[0]["confidence"],
+        "top5": top5
     })
-
-@app.get("/health")
-def health():
-    return {"status": "ok"}

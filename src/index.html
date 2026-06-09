@@ -63,6 +63,7 @@
     .prediction-card { background: var(--color-bg); border: 0.5px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; flex-direction: column; gap: 12px; }
     .species-badge { background: var(--color-bg-info); color: var(--color-text-info); font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: var(--radius-md); display: inline-block; }
     .species-name { font-size: 20px; font-weight: 500; margin-top: 8px; }
+    .species-scientific { font-size: 12px; color: var(--color-text-tertiary); font-style: italic; margin-top: 2px; }
     .confidence-label { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 4px; }
     .confidence-bar-bg { height: 6px; background: var(--color-bg-tertiary); border-radius: 99px; overflow: hidden; margin-top: 6px; }
     .confidence-bar-fill { height: 100%; background: var(--color-text-info); border-radius: 99px; transition: width 0.6s cubic-bezier(0.4,0,0.2,1); }
@@ -70,7 +71,7 @@
     .all-probs { border-top: 0.5px solid var(--color-border); padding-top: 12px; }
     .prob-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
     .prob-row:last-child { margin-bottom: 0; }
-    .prob-name { font-size: 12px; color: var(--color-text-secondary); width: 120px; flex-shrink: 0; }
+    .prob-name { font-size: 12px; color: var(--color-text-secondary); width: 140px; flex-shrink: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .prob-bar-bg { flex: 1; height: 4px; background: var(--color-bg-tertiary); border-radius: 99px; overflow: hidden; }
     .prob-bar-fill { height: 100%; background: var(--color-border-hover); border-radius: 99px; }
     .prob-bar-fill.top { background: var(--color-text-info); }
@@ -102,13 +103,13 @@
 
   <script>
     const API = '';
-    const CLASSES = ['Black Sea Sprat','Gilt-Head Bream','Hourse Mackerel','Red Mullet','Red Sea Bream','Sea Bass','Shrimp','Striped Red Mullet','Trout'];
     const drop = document.getElementById('drop-zone');
     const fileInput = document.getElementById('file-input');
     const resultArea = document.getElementById('result-area');
     const samplesSection = document.getElementById('samples-section');
     const samplesGrid = document.getElementById('samples-grid');
 
+    // Load sample images from API
     fetch(`${API}/samples-list`)
       .then(r => r.json())
       .then(data => {
@@ -118,7 +119,7 @@
             const img = document.createElement('img');
             img.src = `${API}/samples/${name}`;
             img.className = 'sample-thumb';
-            img.alt = name.replace(/_/g, ' ').replace('.png', '');
+            img.alt = name.replace(/_/g, ' ').replace(/\.(png|jpg|jpeg)$/, '');
             img.title = img.alt;
             img.addEventListener('click', () => predictFromUrl(`${API}/samples/${name}`, name));
             samplesGrid.appendChild(img);
@@ -164,10 +165,7 @@
 
     function showResult(imgUrl, data) {
       const conf = parseFloat(data.confidence);
-      const mockProbs = CLASSES.map(c => ({ name: c, pct: c === data.species ? conf : Math.random() * ((100 - conf) / (CLASSES.length - 1)) }));
-      const total = mockProbs.reduce((s, p) => s + p.pct, 0);
-      mockProbs.forEach(p => p.pct = (p.pct / total) * 100);
-      mockProbs.sort((a, b) => b.pct - a.pct);
+      const top5 = data.top5 || [{ species: data.species, confidence: conf }];
 
       resultArea.innerHTML = `
         <div class="result-grid">
@@ -179,6 +177,7 @@
             <div>
               <div class="species-badge">Identified</div>
               <div class="species-name">${data.species}</div>
+              <div class="species-scientific">${data.scientific ? data.scientific.replace(/_/g, ' ') : ''}</div>
             </div>
             <div>
               <div class="confidence-label">Confidence</div>
@@ -188,11 +187,13 @@
               </div>
             </div>
             <div class="all-probs">
-              ${mockProbs.map((p, i) => `
+              ${top5.map((p, i) => `
                 <div class="prob-row">
-                  <span class="prob-name">${p.name}</span>
-                  <div class="prob-bar-bg"><div class="prob-bar-fill ${i===0?'top':''}" style="width:${p.pct.toFixed(1)}%"></div></div>
-                  <span class="prob-pct">${p.pct.toFixed(1)}%</span>
+                  <span class="prob-name" title="${p.species}">${p.species}</span>
+                  <div class="prob-bar-bg">
+                    <div class="prob-bar-fill ${i === 0 ? 'top' : ''}" style="width:${p.confidence.toFixed(1)}%"></div>
+                  </div>
+                  <span class="prob-pct">${p.confidence.toFixed(1)}%</span>
                 </div>
               `).join('')}
             </div>
