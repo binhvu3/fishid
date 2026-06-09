@@ -1,0 +1,1214 @@
+{
+  "Abramis_brama": {
+    "common": "Common Bream",
+    "scientific": "Abramis brama",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/170747213/medium.jpg",
+    "taxon_id": 92984
+  },
+  "Abudefduf_saxatilis": {
+    "common": "Atlantic Sergeant Major",
+    "scientific": "Abudefduf saxatilis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/201212504/medium.jpg",
+    "taxon_id": 49402
+  },
+  "Abudefduf_sexfasciatus": {
+    "common": "Scissortail Sergeant",
+    "scientific": "Abudefduf sexfasciatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/237987698/medium.jpg",
+    "taxon_id": 49401
+  },
+  "Abudefduf_sordidus": {
+    "common": "Blackspot Sergeant",
+    "scientific": "Abudefduf sordidus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/9792776/medium.jpg",
+    "taxon_id": 123922
+  },
+  "Abudefduf_troschelii": {
+    "common": "Panamic Sergeant Major",
+    "scientific": "Abudefduf troschelii",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/4460945/medium.jpg",
+    "taxon_id": 92989
+  },
+  "Abudefduf_vaigiensis": {
+    "common": "Indo-Pacific Sergeant Major",
+    "scientific": "Abudefduf vaigiensis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/323527412/medium.jpg",
+    "taxon_id": 49403
+  },
+  "Acanthopagrus_australis": {
+    "common": "Yellowfin Bream",
+    "scientific": "Acanthopagrus australis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/5942267/medium.jpg",
+    "taxon_id": 132533
+  },
+  "Acanthurus_coeruleus": {
+    "common": "Atlantic Blue Tang",
+    "scientific": "Acanthurus coeruleus",
+    "photo_url": "https://static.inaturalist.org/photos/54043219/medium.jpg",
+    "taxon_id": 121196
+  },
+  "Acanthurus_lineatus": {
+    "common": "Striped Surgeonfish",
+    "scientific": "Acanthurus lineatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/106348771/medium.jpg",
+    "taxon_id": 135283
+  },
+  "Acanthurus_nigrofuscus": {
+    "common": "Dusky Surgeonfish",
+    "scientific": "Acanthurus nigrofuscus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/11975500/medium.jpeg",
+    "taxon_id": 132410
+  },
+  "Acanthurus_sandvicensis": {
+    "common": "Hawaiian Convict Surgeonfish",
+    "scientific": "Acanthurus sandvicensis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/558736164/medium.jpg",
+    "taxon_id": 1315888
+  },
+  "Acanthurus_tractus": {
+    "common": "Caribbean Ocean Surgeonfish",
+    "scientific": "Acanthurus tractus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/415505249/medium.jpg",
+    "taxon_id": 871060
+  },
+  "Acanthurus_triostegus": {
+    "common": "Convict Surgeonfish",
+    "scientific": "Acanthurus triostegus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/237987787/medium.jpg",
+    "taxon_id": 59931
+  },
+  "Acanthurus_xanthopterus": {
+    "common": "Yellowfin Surgeonfish",
+    "scientific": "Acanthurus xanthopterus",
+    "photo_url": "https://static.inaturalist.org/photos/60491453/medium.jpg",
+    "taxon_id": 132366
+  },
+  "Achoerodus_viridis": {
+    "common": "Eastern Blue Groper",
+    "scientific": "Achoerodus viridis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/354156294/medium.jpg",
+    "taxon_id": 93137
+  },
+  "Alburnus_alburnus": {
+    "common": "Bleak",
+    "scientific": "Alburnus alburnus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/425095556/medium.jpg",
+    "taxon_id": 93611
+  },
+  "Aluterus_scriptus": {
+    "common": "Scrawled Filefish",
+    "scientific": "Aluterus scriptus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/145409892/medium.jpeg",
+    "taxon_id": 49498
+  },
+  "Ambloplites_rupestris": {
+    "common": "Rock Bass",
+    "scientific": "Ambloplites rupestris",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/144553630/medium.jpeg",
+    "taxon_id": 58637
+  },
+  "Ameiurus_melas": {
+    "common": "Black Bullhead",
+    "scientific": "Ameiurus melas",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/366643276/medium.jpg",
+    "taxon_id": 82278
+  },
+  "Ameiurus_natalis": {
+    "common": "Yellow Bullhead",
+    "scientific": "Ameiurus natalis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/32059041/medium.jpeg",
+    "taxon_id": 58657
+  },
+  "Ameiurus_nebulosus": {
+    "common": "Brown Bullhead",
+    "scientific": "Ameiurus nebulosus",
+    "photo_url": "https://static.inaturalist.org/photos/38036686/medium.jpg",
+    "taxon_id": 58654
+  },
+  "Amphiprion_clarkii": {
+    "common": "Clark's Anemonefish",
+    "scientific": "Amphiprion clarkii",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/19350008/medium.jpg",
+    "taxon_id": 136345
+  },
+  "Amphiprion_ocellaris": {
+    "common": "Ocellaris Anemonefish",
+    "scientific": "Amphiprion ocellaris",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/106318566/medium.jpg",
+    "taxon_id": 132688
+  },
+  "Anguilla_rostrata": {
+    "common": "American Eel",
+    "scientific": "Anguilla rostrata",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/9901094/medium.jpg",
+    "taxon_id": 49219
+  },
+  "Aplodinotus_grunniens": {
+    "common": "Freshwater Drum",
+    "scientific": "Aplodinotus grunniens",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/406314036/medium.jpeg",
+    "taxon_id": 49749
+  },
+  "Aracana_ornata": {
+    "common": "Ornate Cowfish",
+    "scientific": "Aracana ornata",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/208458161/medium.jpg",
+    "taxon_id": 196867
+  },
+  "Archosargus_probatocephalus": {
+    "common": "Sheepshead",
+    "scientific": "Archosargus probatocephalus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/162087134/medium.jpg",
+    "taxon_id": 49750
+  },
+  "Ariopsis_felis": {
+    "common": "Hardhead Catfish",
+    "scientific": "Ariopsis felis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/301266724/medium.jpg",
+    "taxon_id": 94635
+  },
+  "Arothron_hispidus": {
+    "common": "White-spotted Puffer",
+    "scientific": "Arothron hispidus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/487402233/medium.jpg",
+    "taxon_id": 144017
+  },
+  "Arothron_meleagris": {
+    "common": "Guineafowl Puffer",
+    "scientific": "Arothron meleagris",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/126081673/medium.jpeg",
+    "taxon_id": 83318
+  },
+  "Arothron_nigropunctatus": {
+    "common": "Blackspotted Puffer",
+    "scientific": "Arothron nigropunctatus",
+    "photo_url": "https://static.inaturalist.org/photos/13138055/medium.jpg",
+    "taxon_id": 119385
+  },
+  "Aulostomus_chinensis": {
+    "common": "Pacific Trumpetfish",
+    "scientific": "Aulostomus chinensis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/61754806/medium.jpg",
+    "taxon_id": 47239
+  },
+  "Aulostomus_maculatus": {
+    "common": "Western Atlantic Trumpetfish",
+    "scientific": "Aulostomus maculatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/443957073/medium.jpg",
+    "taxon_id": 47238
+  },
+  "Balistapus_undulatus": {
+    "common": "Orangestripe Triggerfish",
+    "scientific": "Balistapus undulatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/70598017/medium.jpg",
+    "taxon_id": 57743
+  },
+  "Balistoides_viridescens": {
+    "common": "Titan Triggerfish",
+    "scientific": "Balistoides viridescens",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/487803511/medium.jpg",
+    "taxon_id": 123392
+  },
+  "Betta_splendens": {
+    "common": "Siamese Fighting Fish",
+    "scientific": "Betta splendens",
+    "photo_url": "https://static.inaturalist.org/photos/564865375/medium.jpg",
+    "taxon_id": 95748
+  },
+  "Brevoortia_tyrannus": {
+    "common": "Atlantic Menhaden",
+    "scientific": "Brevoortia tyrannus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/14670459/medium.jpg",
+    "taxon_id": 51363
+  },
+  "Campostoma_anomalum": {
+    "common": "Central Stoneroller",
+    "scientific": "Campostoma anomalum",
+    "photo_url": "https://static.inaturalist.org/photos/348517124/medium.jpeg",
+    "taxon_id": 96631
+  },
+  "Canthigaster_valentini": {
+    "common": "Blacksaddle Toby",
+    "scientific": "Canthigaster valentini",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/32507619/medium.jpg",
+    "taxon_id": 129549
+  },
+  "Caranx_melampygus": {
+    "common": "Bluefin Trevally",
+    "scientific": "Caranx melampygus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608164205/medium.jpg",
+    "taxon_id": 123690
+  },
+  "Caranx_ruber": {
+    "common": "Bar Jack",
+    "scientific": "Caranx ruber",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/177394061/medium.jpg",
+    "taxon_id": 82330
+  },
+  "Carassius_auratus": {
+    "common": "Goldfish",
+    "scientific": "Carassius auratus",
+    "photo_url": "https://static.inaturalist.org/photos/203973907/medium.jpg",
+    "taxon_id": 58612
+  },
+  "Carassius_gibelio": {
+    "common": "Prussian Carp",
+    "scientific": "Carassius gibelio",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/6974179/medium.jpeg",
+    "taxon_id": 424997
+  },
+  "Catostomus_commersonii": {
+    "common": "White Sucker",
+    "scientific": "Catostomus commersonii",
+    "photo_url": "https://static.inaturalist.org/photos/356965190/medium.jpeg",
+    "taxon_id": 81556
+  },
+  "Cephalopholis_argus": {
+    "common": "Peacock Grouper",
+    "scientific": "Cephalopholis argus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/237394538/medium.jpg",
+    "taxon_id": 52456
+  },
+  "Chaetodon_auriga": {
+    "common": "Threadfin Butterflyfish",
+    "scientific": "Chaetodon auriga",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/14193990/medium.jpg",
+    "taxon_id": 52457
+  },
+  "Chaetodon_capistratus": {
+    "common": "Four-eyed Butterflyfish",
+    "scientific": "Chaetodon capistratus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/232139774/medium.jpg",
+    "taxon_id": 52956
+  },
+  "Chaetodon_lunula": {
+    "common": "Raccoon Butterflyfish",
+    "scientific": "Chaetodon lunula",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/251578086/medium.jpg",
+    "taxon_id": 47316
+  },
+  "Chaetodon_lunulatus": {
+    "common": "Redfin Butterflyfish",
+    "scientific": "Chaetodon lunulatus",
+    "photo_url": "https://static.inaturalist.org/photos/31277825/medium.jpg",
+    "taxon_id": 48743
+  },
+  "Chaetodon_vagabundus": {
+    "common": "Vagabond Butterflyfish",
+    "scientific": "Chaetodon vagabundus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/370078467/medium.jpg",
+    "taxon_id": 48747
+  },
+  "Channa_striata": {
+    "common": "Striped Snakehead",
+    "scientific": "Channa striata",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/948814/medium.jpg",
+    "taxon_id": 97280
+  },
+  "Chilomycterus_schoepfii": {
+    "common": "Striped Burrfish",
+    "scientific": "Chilomycterus schoepfii",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/59037834/medium.jpeg",
+    "taxon_id": 82264
+  },
+  "Chlorurus_spilurus": {
+    "common": "Pacific Bullethead Parrotfish",
+    "scientific": "Chlorurus spilurus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/256035426/medium.jpg",
+    "taxon_id": 187233
+  },
+  "Chromis_chromis": {
+    "common": "Mediterranean Damselfish",
+    "scientific": "Chromis chromis",
+    "photo_url": "https://static.inaturalist.org/photos/27541297/medium.jpg",
+    "taxon_id": 118682
+  },
+  "Chromis_viridis": {
+    "common": "Blue-green Chromis",
+    "scientific": "Chromis viridis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/936216/medium.jpg",
+    "taxon_id": 179880
+  },
+  "Chrysophrys_auratus": {
+    "common": "Australasian Snapper",
+    "scientific": "Chrysophrys auratus",
+    "photo_url": "https://static.inaturalist.org/photos/18161210/medium.jpeg",
+    "taxon_id": 530886
+  },
+  "Clinocottus_analis": {
+    "common": "Woolly Sculpin",
+    "scientific": "Clinocottus analis",
+    "photo_url": "https://static.inaturalist.org/photos/113114220/medium.jpeg",
+    "taxon_id": 117533
+  },
+  "Coris_julis": {
+    "common": "Mediterranean Rainbow Wrasse",
+    "scientific": "Coris julis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/244363348/medium.jpg",
+    "taxon_id": 50968
+  },
+  "Ctenochaetus_striatus": {
+    "common": "Lined Bristletooth",
+    "scientific": "Ctenochaetus striatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/236610160/medium.jpg",
+    "taxon_id": 180389
+  },
+  "Ctenopharyngodon_idella": {
+    "common": "Grass Carp",
+    "scientific": "Ctenopharyngodon idella",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/350305483/medium.jpg",
+    "taxon_id": 128500
+  },
+  "Culaea_inconstans": {
+    "common": "Brook Stickleback",
+    "scientific": "Culaea inconstans",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/478780202/medium.jpeg",
+    "taxon_id": 58639
+  },
+  "Cyprinodon_variegatus": {
+    "common": "Sheepshead Minnow",
+    "scientific": "Cyprinodon variegatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/21906298/medium.jpg",
+    "taxon_id": 98945
+  },
+  "Cyprinus_carpio": {
+    "common": "European Carp",
+    "scientific": "Cyprinus carpio",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/2754663/medium.JPG",
+    "taxon_id": 53911
+  },
+  "Cyprinus_rubrofuscus": {
+    "common": "Amur Carp",
+    "scientific": "Cyprinus rubrofuscus",
+    "photo_url": "https://static.inaturalist.org/photos/516609688/medium.jpg",
+    "taxon_id": 187316
+  },
+  "Dascyllus_trimaculatus": {
+    "common": "Three-spot Dascyllus",
+    "scientific": "Dascyllus trimaculatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/207083638/medium.jpg",
+    "taxon_id": 49303
+  },
+  "Diodon_holocanthus": {
+    "common": "Longspined Porcupinefish",
+    "scientific": "Diodon holocanthus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/246231050/medium.jpg",
+    "taxon_id": 49269
+  },
+  "Diodon_hystrix": {
+    "common": "Spotted Porcupinefish",
+    "scientific": "Diodon hystrix",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/1554950/medium.jpg",
+    "taxon_id": 52313
+  },
+  "Diodon_nicthemerus": {
+    "common": "Globefish",
+    "scientific": "Diodon nicthemerus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/254820338/medium.jpeg",
+    "taxon_id": 489420
+  },
+  "Diplodus_sargus": {
+    "common": "White Sea Bream",
+    "scientific": "Diplodus sargus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/156153979/medium.jpg",
+    "taxon_id": 118669
+  },
+  "Diplodus_vulgaris": {
+    "common": "Common Two-banded Seabream",
+    "scientific": "Diplodus vulgaris",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/429699/medium.jpg",
+    "taxon_id": 118667
+  },
+  "Dorosoma_cepedianum": {
+    "common": "American Gizzard Shad",
+    "scientific": "Dorosoma cepedianum",
+    "photo_url": "https://static.inaturalist.org/photos/345079067/medium.jpeg",
+    "taxon_id": 99544
+  },
+  "Echidna_nebulosa": {
+    "common": "Snowflake Moray",
+    "scientific": "Echidna nebulosa",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/84610411/medium.jpg",
+    "taxon_id": 54441
+  },
+  "Enoplosus_armatus": {
+    "common": "Old Wife",
+    "scientific": "Enoplosus armatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/54935176/medium.jpeg",
+    "taxon_id": 322007
+  },
+  "Epinephelus_marginatus": {
+    "common": "Dusky Grouper",
+    "scientific": "Epinephelus marginatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/576952820/medium.jpg",
+    "taxon_id": 100119
+  },
+  "Esox_lucius": {
+    "common": "Northern Pike",
+    "scientific": "Esox lucius",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/486754787/medium.jpg",
+    "taxon_id": 55387
+  },
+  "Esox_niger": {
+    "common": "Chain Pickerel",
+    "scientific": "Esox niger",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/55201972/medium.jpg",
+    "taxon_id": 51367
+  },
+  "Etheostoma_caeruleum": {
+    "common": "Rainbow Darter",
+    "scientific": "Etheostoma caeruleum",
+    "photo_url": "https://static.inaturalist.org/photos/626730095/medium.jpg",
+    "taxon_id": 58633
+  },
+  "Etheostoma_flabellare": {
+    "common": "Fantail Darter",
+    "scientific": "Etheostoma flabellare",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/28382153/medium.jpg",
+    "taxon_id": 100476
+  },
+  "Fistularia_commersonii": {
+    "common": "Blue-spotted Cornetfish",
+    "scientific": "Fistularia commersonii",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/564563445/medium.jpg",
+    "taxon_id": 57399
+  },
+  "Fundulus_diaphanus": {
+    "common": "Banded Killifish",
+    "scientific": "Fundulus diaphanus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/610419859/medium.jpg",
+    "taxon_id": 101053
+  },
+  "Fundulus_heteroclitus": {
+    "common": "Mummichog",
+    "scientific": "Fundulus heteroclitus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/21705657/medium.jpg",
+    "taxon_id": 58642
+  },
+  "Gambusia_affinis": {
+    "common": "Western Mosquitofish",
+    "scientific": "Gambusia affinis",
+    "photo_url": "https://static.inaturalist.org/photos/553681986/medium.jpg",
+    "taxon_id": 59115
+  },
+  "Gambusia_holbrooki": {
+    "common": "Eastern Mosquitofish",
+    "scientific": "Gambusia holbrooki",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/242594722/medium.jpeg",
+    "taxon_id": 101204
+  },
+  "Gasterosteus_aculeatus": {
+    "common": "Threespine Stickleback",
+    "scientific": "Gasterosteus aculeatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/244775846/medium.jpg",
+    "taxon_id": 48403
+  },
+  "Gobius_niger": {
+    "common": "Black Goby",
+    "scientific": "Gobius niger",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/6157858/medium.jpg",
+    "taxon_id": 118704
+  },
+  "Gomphosus_varius": {
+    "common": "Bird Wrasse",
+    "scientific": "Gomphosus varius",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/401424063/medium.jpg",
+    "taxon_id": 52508
+  },
+  "Gymnothorax_javanicus": {
+    "common": "Giant Moray",
+    "scientific": "Gymnothorax javanicus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/247871410/medium.jpg",
+    "taxon_id": 121000
+  },
+  "Haemulon_flavolineatum": {
+    "common": "French Grunt",
+    "scientific": "Haemulon flavolineatum",
+    "photo_url": "https://static.inaturalist.org/photos/54301844/medium.jpg",
+    "taxon_id": 62600
+  },
+  "Haemulon_sciurus": {
+    "common": "Bluestriped Grunt",
+    "scientific": "Haemulon sciurus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/89086083/medium.jpg",
+    "taxon_id": 49262
+  },
+  "Haletta_semifasciata": {
+    "common": "Blue Weed-whiting",
+    "scientific": "Haletta semifasciata",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/51802600/medium.jpg",
+    "taxon_id": 68640
+  },
+  "Halichoeres_bivittatus": {
+    "common": "Slippery Dick",
+    "scientific": "Halichoeres bivittatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/349653937/medium.jpg",
+    "taxon_id": 49272
+  },
+  "Halichoeres_hortulanus": {
+    "common": "Checkerboard Wrasse",
+    "scientific": "Halichoeres hortulanus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/239664823/medium.jpg",
+    "taxon_id": 102045
+  },
+  "Hemigymnus_melapterus": {
+    "common": "Blackeye Thicklip",
+    "scientific": "Hemigymnus melapterus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/254448032/medium.jpg",
+    "taxon_id": 102580
+  },
+  "Hippocampus_abdominalis": {
+    "common": "Bigbelly Seahorse",
+    "scientific": "Hippocampus abdominalis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/5684088/medium.jpg",
+    "taxon_id": 69837
+  },
+  "Hypentelium_nigricans": {
+    "common": "Northern Hog Sucker",
+    "scientific": "Hypentelium nigricans",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/560630434/medium.jpg",
+    "taxon_id": 58659
+  },
+  "Hypsypops_rubicundus": {
+    "common": "Garibaldi",
+    "scientific": "Hypsypops rubicundus",
+    "photo_url": "https://static.inaturalist.org/photos/410429697/medium.jpg",
+    "taxon_id": 53693
+  },
+  "Ictalurus_punctatus": {
+    "common": "Channel Catfish",
+    "scientific": "Ictalurus punctatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/455557089/medium.jpeg",
+    "taxon_id": 81554
+  },
+  "Labroides_dimidiatus": {
+    "common": "Bluestreak Cleaner Wrasse",
+    "scientific": "Labroides dimidiatus",
+    "photo_url": "https://static.inaturalist.org/photos/14296673/medium.jpg",
+    "taxon_id": 103901
+  },
+  "Lactophrys_triqueter": {
+    "common": "Smooth Trunkfish",
+    "scientific": "Lactophrys triqueter",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/59012903/medium.jpeg",
+    "taxon_id": 577603
+  },
+  "Lagodon_rhomboides": {
+    "common": "Pinfish",
+    "scientific": "Lagodon rhomboides",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/23327498/medium.jpg",
+    "taxon_id": 132473
+  },
+  "Lepisosteus_oculatus": {
+    "common": "Spotted Gar",
+    "scientific": "Lepisosteus oculatus",
+    "photo_url": "https://static.inaturalist.org/photos/569249126/medium.jpg",
+    "taxon_id": 104249
+  },
+  "Lepisosteus_osseus": {
+    "common": "Longnose Gar",
+    "scientific": "Lepisosteus osseus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/9828456/medium.jpg",
+    "taxon_id": 58609
+  },
+  "Lepisosteus_platyrhincus": {
+    "common": "Florida Gar",
+    "scientific": "Lepisosteus platyrhincus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/29155194/medium.jpg",
+    "taxon_id": 104251
+  },
+  "Lepomis_aquilensis": {
+    "common": "Plains Longear Sunfish",
+    "scientific": "Lepomis aquilensis",
+    "photo_url": "https://static.inaturalist.org/photos/579921740/medium.jpg",
+    "taxon_id": 1364008
+  },
+  "Lepomis_auritus": {
+    "common": "Redbreast Sunfish",
+    "scientific": "Lepomis auritus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/207601243/medium.jpeg",
+    "taxon_id": 85365
+  },
+  "Lepomis_cyanellus": {
+    "common": "Green Sunfish",
+    "scientific": "Lepomis cyanellus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/32059001/medium.jpeg",
+    "taxon_id": 58636
+  },
+  "Lepomis_gibbosus": {
+    "common": "Pumpkinseed",
+    "scientific": "Lepomis gibbosus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/244776119/medium.jpg",
+    "taxon_id": 49614
+  },
+  "Lepomis_gulosus": {
+    "common": "Warmouth",
+    "scientific": "Lepomis gulosus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/229269718/medium.jpg",
+    "taxon_id": 104252
+  },
+  "Lepomis_macrochirus": {
+    "common": "Bluegill",
+    "scientific": "Lepomis macrochirus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/339074/medium.png",
+    "taxon_id": 49591
+  },
+  "Lepomis_megalotis": {
+    "common": "Longear Sunfish",
+    "scientific": "Lepomis megalotis",
+    "photo_url": "https://static.inaturalist.org/photos/311647160/medium.jpeg",
+    "taxon_id": 58635
+  },
+  "Lepomis_microlophus": {
+    "common": "Redear Sunfish",
+    "scientific": "Lepomis microlophus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/481688747/medium.jpeg",
+    "taxon_id": 85127
+  },
+  "Lipophrys_pholis": {
+    "common": "Shanny",
+    "scientific": "Lipophrys pholis",
+    "photo_url": "https://static.inaturalist.org/photos/29614655/medium.jpg",
+    "taxon_id": 210294
+  },
+  "Lutjanus_apodus": {
+    "common": "Schoolmaster Snapper",
+    "scientific": "Lutjanus apodus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/415486737/medium.jpg",
+    "taxon_id": 81989
+  },
+  "Lutjanus_griseus": {
+    "common": "Gray Snapper",
+    "scientific": "Lutjanus griseus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/413518733/medium.jpg",
+    "taxon_id": 49509
+  },
+  "Luxilus_chrysocephalus": {
+    "common": "Striped Shiner",
+    "scientific": "Luxilus chrysocephalus",
+    "photo_url": "https://static.inaturalist.org/photos/365430622/medium.jpeg",
+    "taxon_id": 104867
+  },
+  "Luxilus_cornutus": {
+    "common": "Common Shiner",
+    "scientific": "Luxilus cornutus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/124859379/medium.jpeg",
+    "taxon_id": 58618
+  },
+  "Mayaheros_urophthalmus": {
+    "common": "Mayan Cichlid",
+    "scientific": "Mayaheros urophthalmus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/361402191/medium.jpg",
+    "taxon_id": 623746
+  },
+  "Megalops_atlanticus": {
+    "common": "Atlantic Tarpon",
+    "scientific": "Megalops atlanticus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/54532250/medium.jpeg",
+    "taxon_id": 51402
+  },
+  "Melichthys_niger": {
+    "common": "Black Triggerfish",
+    "scientific": "Melichthys niger",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/196252/medium.jpg",
+    "taxon_id": 52464
+  },
+  "Micropterus_dolomieu": {
+    "common": "Smallmouth Bass",
+    "scientific": "Micropterus dolomieu",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/156646600/medium.jpg",
+    "taxon_id": 49590
+  },
+  "Micropterus_nigricans": {
+    "common": "Largemouth Bass",
+    "scientific": "Micropterus nigricans",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/32058892/medium.jpeg",
+    "taxon_id": 1439808
+  },
+  "Micropterus_salmoides": {
+    "common": "Florida Bass",
+    "scientific": "Micropterus salmoides",
+    "photo_url": "https://static.inaturalist.org/photos/126577823/medium.jpg",
+    "taxon_id": 49587
+  },
+  "Microspathodon_chrysurus": {
+    "common": "Yellowtail Damselfish",
+    "scientific": "Microspathodon chrysurus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/156532017/medium.jpg",
+    "taxon_id": 49753
+  },
+  "Mola_mola": {
+    "common": "Common Mola",
+    "scientific": "Mola mola",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/239888168/medium.jpeg",
+    "taxon_id": 49658
+  },
+  "Morone_americana": {
+    "common": "White Perch",
+    "scientific": "Morone americana",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/240159095/medium.jpeg",
+    "taxon_id": 84432
+  },
+  "Morone_saxatilis": {
+    "common": "Striped Bass",
+    "scientific": "Morone saxatilis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/175377771/medium.jpg",
+    "taxon_id": 51392
+  },
+  "Mugil_cephalus": {
+    "common": "Sea Mullet",
+    "scientific": "Mugil cephalus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/11976021/medium.jpeg",
+    "taxon_id": 106222
+  },
+  "Mulloidichthys_flavolineatus": {
+    "common": "Yellowstripe Goatfish",
+    "scientific": "Mulloidichthys flavolineatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/234640083/medium.jpg",
+    "taxon_id": 123346
+  },
+  "Mullus_surmuletus": {
+    "common": "Striped Red Mullet",
+    "scientific": "Mullus surmuletus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/347725152/medium.jpg",
+    "taxon_id": 118619
+  },
+  "Muraena_helena": {
+    "common": "Mediterranean Moray",
+    "scientific": "Muraena helena",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/2563138/medium.jpg",
+    "taxon_id": 118590
+  },
+  "Naso_lituratus": {
+    "common": "Pacific Orange-spine Unicornfish",
+    "scientific": "Naso lituratus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/6635721/medium.jpg",
+    "taxon_id": 52451
+  },
+  "Naso_unicornis": {
+    "common": "Bluespine Unicornfish",
+    "scientific": "Naso unicornis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/653446742/medium.jpg",
+    "taxon_id": 121658
+  },
+  "Neogobius_melanostomus": {
+    "common": "Round Goby",
+    "scientific": "Neogobius melanostomus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/24046034/medium.jpg",
+    "taxon_id": 106743
+  },
+  "Notemigonus_crysoleucas": {
+    "common": "Golden Shiner",
+    "scientific": "Notemigonus crysoleucas",
+    "photo_url": "https://static.inaturalist.org/photos/201067012/medium.jpg",
+    "taxon_id": 51351
+  },
+  "Oblada_melanurus": {
+    "common": "Saddled Seabream",
+    "scientific": "Oblada melanurus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/8074045/medium.jpg",
+    "taxon_id": 118662
+  },
+  "Ocyurus_chrysurus": {
+    "common": "Yellowtail Snapper",
+    "scientific": "Ocyurus chrysurus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/151931476/medium.jpg",
+    "taxon_id": 47292
+  },
+  "Oligocottus_maculosus": {
+    "common": "Tidepool Sculpin",
+    "scientific": "Oligocottus maculosus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/240955373/medium.jpeg",
+    "taxon_id": 67629
+  },
+  "Oncorhynchus_kisutch": {
+    "common": "Coho Salmon",
+    "scientific": "Oncorhynchus kisutch",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/5139610/medium.jpg",
+    "taxon_id": 53692
+  },
+  "Oncorhynchus_mykiss": {
+    "common": "Rainbow Trout",
+    "scientific": "Oncorhynchus mykiss",
+    "photo_url": "https://static.inaturalist.org/photos/60921460/medium.jpg",
+    "taxon_id": 47516
+  },
+  "Oncorhynchus_nerka": {
+    "common": "Sockeye Salmon",
+    "scientific": "Oncorhynchus nerka",
+    "photo_url": "https://static.inaturalist.org/photos/63131203/medium.jpg",
+    "taxon_id": 69922
+  },
+  "Oncorhynchus_tshawytscha": {
+    "common": "Chinook Salmon",
+    "scientific": "Oncorhynchus tshawytscha",
+    "photo_url": "https://static.inaturalist.org/photos/243843533/medium.jpeg",
+    "taxon_id": 54191
+  },
+  "Ophiodon_elongatus": {
+    "common": "Lingcod",
+    "scientific": "Ophiodon elongatus",
+    "photo_url": "https://static.inaturalist.org/photos/121620546/medium.jpg",
+    "taxon_id": 52539
+  },
+  "Oreochromis_mossambicus": {
+    "common": "Mozambique Tilapia",
+    "scientific": "Oreochromis mossambicus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/27229755/medium.jpg",
+    "taxon_id": 107889
+  },
+  "Oreochromis_niloticus": {
+    "common": "Nile Tilapia",
+    "scientific": "Oreochromis niloticus",
+    "photo_url": "https://static.inaturalist.org/photos/104437442/medium.jpg",
+    "taxon_id": 121324
+  },
+  "Ostracion_cubicum": {
+    "common": "Yellow Boxfish",
+    "scientific": "Ostracion cubicum",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/230133564/medium.jpg",
+    "taxon_id": 49378
+  },
+  "Ostracion_meleagris": {
+    "common": "Spotted Boxfish",
+    "scientific": "Ostracion meleagris",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/151064522/medium.jpeg",
+    "taxon_id": 47527
+  },
+  "Parablennius_gattorugine": {
+    "common": "Tompot Blenny",
+    "scientific": "Parablennius gattorugine",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/477107/medium.jpg",
+    "taxon_id": 118685
+  },
+  "Parablennius_pilicornis": {
+    "common": "Ringneck Blenny",
+    "scientific": "Parablennius pilicornis",
+    "photo_url": "https://static.inaturalist.org/photos/2791095/medium.jpg",
+    "taxon_id": 338049
+  },
+  "Paracirrhites_forsteri": {
+    "common": "Freckled Hawkfish",
+    "scientific": "Paracirrhites forsteri",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/503412920/medium.jpg",
+    "taxon_id": 67658
+  },
+  "Parupeneus_multifasciatus": {
+    "common": "Manybar Goatfish",
+    "scientific": "Parupeneus multifasciatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/252802238/medium.jpg",
+    "taxon_id": 131234
+  },
+  "Perca_flavescens": {
+    "common": "Yellow Perch",
+    "scientific": "Perca flavescens",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/441018034/medium.jpeg",
+    "taxon_id": 58627
+  },
+  "Perca_fluviatilis": {
+    "common": "European Perch",
+    "scientific": "Perca fluviatilis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/194421912/medium.jpg",
+    "taxon_id": 109062
+  },
+  "Phyllopteryx_taeniolatus": {
+    "common": "Weedy Seadragon",
+    "scientific": "Phyllopteryx taeniolatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/280641424/medium.jpeg",
+    "taxon_id": 54536
+  },
+  "Pimephales_notatus": {
+    "common": "Bluntnose Minnow",
+    "scientific": "Pimephales notatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/146718188/medium.jpeg",
+    "taxon_id": 58624
+  },
+  "Pimephales_promelas": {
+    "common": "Fathead Minnow",
+    "scientific": "Pimephales promelas",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/668122228/medium.jpg",
+    "taxon_id": 109536
+  },
+  "Platax_teira": {
+    "common": "Longfin Batfish",
+    "scientific": "Platax teira",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/35639085/medium.jpg",
+    "taxon_id": 69859
+  },
+  "Plotosus_lineatus": {
+    "common": "Striped Eel Catfish",
+    "scientific": "Plotosus lineatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/487402396/medium.jpg",
+    "taxon_id": 49210
+  },
+  "Poecilia_latipinna": {
+    "common": "Sailfin Molly",
+    "scientific": "Poecilia latipinna",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/248665389/medium.jpg",
+    "taxon_id": 109885
+  },
+  "Poecilia_reticulata": {
+    "common": "Guppy",
+    "scientific": "Poecilia reticulata",
+    "photo_url": "https://static.inaturalist.org/photos/257264089/medium.jpg",
+    "taxon_id": 173412
+  },
+  "Pomacanthus_imperator": {
+    "common": "Emperor Angelfish",
+    "scientific": "Pomacanthus imperator",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/85515783/medium.jpg",
+    "taxon_id": 84181
+  },
+  "Pomacanthus_paru": {
+    "common": "French Angelfish",
+    "scientific": "Pomacanthus paru",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/92794858/medium.jpg",
+    "taxon_id": 49257
+  },
+  "Pomacentrus_moluccensis": {
+    "common": "Lemon Damsel",
+    "scientific": "Pomacentrus moluccensis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/3017968/medium.jpg",
+    "taxon_id": 181028
+  },
+  "Pomoxis_nigromaculatus": {
+    "common": "Black Crappie",
+    "scientific": "Pomoxis nigromaculatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/441025140/medium.jpg",
+    "taxon_id": 49594
+  },
+  "Pterois_miles": {
+    "common": "Indian Lionfish",
+    "scientific": "Pterois miles",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/469525414/medium.jpg",
+    "taxon_id": 123459
+  },
+  "Pterois_volitans": {
+    "common": "Common Lionfish",
+    "scientific": "Pterois volitans",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/4675175/medium.jpg",
+    "taxon_id": 47280
+  },
+  "Pygoplites_diacanthus": {
+    "common": "Regal Angelfish",
+    "scientific": "Pygoplites diacanthus",
+    "photo_url": "https://static.inaturalist.org/photos/115340876/medium.jpg",
+    "taxon_id": 111389
+  },
+  "Rhinecanthus_aculeatus": {
+    "common": "Lagoon Triggerfish",
+    "scientific": "Rhinecanthus aculeatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/165427635/medium.jpg",
+    "taxon_id": 83884
+  },
+  "Rhinichthys_atratulus": {
+    "common": "Eastern Blacknose Dace",
+    "scientific": "Rhinichthys atratulus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/503490301/medium.jpg",
+    "taxon_id": 58664
+  },
+  "Rhinichthys_obtusus": {
+    "common": "Western Blacknose Dace",
+    "scientific": "Rhinichthys obtusus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/648410919/medium.jpg",
+    "taxon_id": 84498
+  },
+  "Rutilus_rutilus": {
+    "common": "Common Roach",
+    "scientific": "Rutilus rutilus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/389786008/medium.jpeg",
+    "taxon_id": 29044
+  },
+  "Salmo_trutta": {
+    "common": "Brown Trout",
+    "scientific": "Salmo trutta",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/34847723/medium.jpg",
+    "taxon_id": 47518
+  },
+  "Salvelinus_fontinalis": {
+    "common": "Brook Trout",
+    "scientific": "Salvelinus fontinalis",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/244460087/medium.jpg",
+    "taxon_id": 49596
+  },
+  "Sander_vitreus": {
+    "common": "Walleye",
+    "scientific": "Sander vitreus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/1379500/medium.jpg",
+    "taxon_id": 48154
+  },
+  "Sarpa_salpa": {
+    "common": "Salema Porgy",
+    "scientific": "Sarpa salpa",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/424954652/medium.jpg",
+    "taxon_id": 118663
+  },
+  "Scardinius_erythrophthalmus": {
+    "common": "Common Rudd",
+    "scientific": "Scardinius erythrophthalmus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/351728711/medium.jpg",
+    "taxon_id": 112118
+  },
+  "Scarus_ghobban": {
+    "common": "Blue-barred Parrotfish",
+    "scientific": "Scarus ghobban",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/183680244/medium.jpg",
+    "taxon_id": 84175
+  },
+  "Scarus_iseri": {
+    "common": "Striped Parrotfish",
+    "scientific": "Scarus iseri",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/6355936/medium.jpeg",
+    "taxon_id": 49690
+  },
+  "Scarus_rubroviolaceus": {
+    "common": "Redlip Parrotfish",
+    "scientific": "Scarus rubroviolaceus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/58070748/medium.jpg",
+    "taxon_id": 83297
+  },
+  "Sciaenops_ocellatus": {
+    "common": "Red Drum",
+    "scientific": "Sciaenops ocellatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/66376342/medium.jpg",
+    "taxon_id": 128750
+  },
+  "Scobinichthys_granulatus": {
+    "common": "Rough Leatherjacket",
+    "scientific": "Scobinichthys granulatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/346367224/medium.jpeg",
+    "taxon_id": 322000
+  },
+  "Scolopsis_bilineata": {
+    "common": "Bridled Monocle Bream",
+    "scientific": "Scolopsis bilineata",
+    "photo_url": "https://static.inaturalist.org/photos/27721175/medium.jpg",
+    "taxon_id": 471636
+  },
+  "Scomber_japonicus": {
+    "common": "Pacific Chub Mackerel",
+    "scientific": "Scomber japonicus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/188918/medium.jpg",
+    "taxon_id": 69840
+  },
+  "Scorpaena_porcus": {
+    "common": "Black Scorpionfish",
+    "scientific": "Scorpaena porcus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/61740418/medium.jpg",
+    "taxon_id": 118631
+  },
+  "Semotilus_atromaculatus": {
+    "common": "Creek Chub",
+    "scientific": "Semotilus atromaculatus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/451999773/medium.jpg",
+    "taxon_id": 58662
+  },
+  "Serranus_scriba": {
+    "common": "Painted Comber",
+    "scientific": "Serranus scriba",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/244363364/medium.jpg",
+    "taxon_id": 118674
+  },
+  "Sparisoma_cretense": {
+    "common": "European Parrotfish",
+    "scientific": "Sparisoma cretense",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/82455367/medium.jpeg",
+    "taxon_id": 112860
+  },
+  "Sparisoma_viride": {
+    "common": "Stoplight Parrotfish",
+    "scientific": "Sparisoma viride",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/48690384/medium.jpg",
+    "taxon_id": 112867
+  },
+  "Sphyraena_barracuda": {
+    "common": "Great Barracuda",
+    "scientific": "Sphyraena barracuda",
+    "photo_url": "https://static.inaturalist.org/photos/64376618/medium.jpeg",
+    "taxon_id": 47251
+  },
+  "Squalius_cephalus": {
+    "common": "European Chub",
+    "scientific": "Squalius cephalus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/4222775/medium.jpg",
+    "taxon_id": 113003
+  },
+  "Symphodus_tinca": {
+    "common": "East Atlantic Peacock Wrasse",
+    "scientific": "Symphodus tinca",
+    "photo_url": "https://static.inaturalist.org/photos/38022693/medium.jpg",
+    "taxon_id": 52554
+  },
+  "Tetractenos_glaber": {
+    "common": "Smooth Toadfish",
+    "scientific": "Tetractenos glaber",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/5406876/medium.jpg",
+    "taxon_id": 311414
+  },
+  "Thalassoma_bifasciatum": {
+    "common": "Caribbean Bluehead Wrasse",
+    "scientific": "Thalassoma bifasciatum",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/323848392/medium.jpg",
+    "taxon_id": 49491
+  },
+  "Thalassoma_hardwicke": {
+    "common": "Sixbar Wrasse",
+    "scientific": "Thalassoma hardwicke",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/234051394/medium.jpg",
+    "taxon_id": 67963
+  },
+  "Thalassoma_lucasanum": {
+    "common": "Cortez Rainbow Wrasse",
+    "scientific": "Thalassoma lucasanum",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/58070760/medium.jpg",
+    "taxon_id": 49493
+  },
+  "Thalassoma_lunare": {
+    "common": "Moon Wrasse",
+    "scientific": "Thalassoma lunare",
+    "photo_url": "https://static.inaturalist.org/photos/123362649/medium.jpg",
+    "taxon_id": 113980
+  },
+  "Thalassoma_pavo": {
+    "common": "Ornate Wrasse",
+    "scientific": "Thalassoma pavo",
+    "photo_url": "https://static.inaturalist.org/photos/27540579/medium.jpg",
+    "taxon_id": 50972
+  },
+  "Thamnaconus_degeni": {
+    "common": "Bluefin Leatherjacket",
+    "scientific": "Thamnaconus degeni",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/137104192/medium.jpg",
+    "taxon_id": 530375
+  },
+  "Trachurus_symmetricus": {
+    "common": "Pacific Jack Mackerel",
+    "scientific": "Trachurus symmetricus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/59025274/medium.jpeg",
+    "taxon_id": 114274
+  },
+  "Tylosurus_crocodilus": {
+    "common": "Houndfish",
+    "scientific": "Tylosurus crocodilus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/70924450/medium.jpg",
+    "taxon_id": 52460
+  },
+  "Zanclus_cornutus": {
+    "common": "Moorish Idol",
+    "scientific": "Zanclus cornutus",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/3080425/medium.jpg",
+    "taxon_id": 83290
+  },
+  "Zebrasoma_flavescens": {
+    "common": "Yellow Tang",
+    "scientific": "Zebrasoma flavescens",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/257063740/medium.jpg",
+    "taxon_id": 52459
+  },
+  "Zebrasoma_velifer": {
+    "common": "Pacific Sailfin Tang",
+    "scientific": "Zebrasoma velifer",
+    "photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/186667903/medium.jpg",
+    "taxon_id": 424818
+  }
+}

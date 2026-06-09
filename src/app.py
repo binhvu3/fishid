@@ -117,3 +117,9 @@ def species_list():
 @app.get("/species-page")
 def species_page():
     return FileResponse(BASE_DIR / "src/species.html")
+
+@app.get("/species-photos")
+def species_photos():
+    photos_path = BASE_DIR / "src/species_photos.json"
+    with open(photos_path) as f:
+        return JSONResponse(json.load(f))
