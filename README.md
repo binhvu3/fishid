@@ -1,4 +1,3 @@
-```markdown
 # FishID 🐟
 
 **Upload a fish photo. Get a species ID.**
@@ -199,4 +198,3 @@ kill $(cat /workspace/models/training.pid)        # stop
 ## License
 
 MIT
-```
