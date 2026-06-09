@@ -9,7 +9,7 @@ RUN pip install --no-cache-dir \
     torch torchvision --index-url https://download.pytorch.org/whl/cpu
 
 RUN pip install --no-cache-dir \
-    fastapi uvicorn python-multipart pillow python-dotenv boto3 slowapi
+    fastapi uvicorn python-multipart pillow python-dotenv boto3 slowapi timm
 
 EXPOSE 8000
 
