@@ -5,6 +5,7 @@
 ![Status](https://img.shields.io/badge/status-live-brightgreen?style=flat)
 ![License](https://img.shields.io/badge/license-MIT-blue?style=flat)
 ![Docker Pulls](https://img.shields.io/docker/pulls/binhvu3/fishid?style=flat)
+![GitHub Release](https://img.shields.io/github/v/release/binhvu3/fishid?style=flat)
 
 🌐 **[fishid.binhtvu.com](https://fishid.binhtvu.com)**
 
@@ -141,6 +142,16 @@ docker buildx build --platform linux/amd64,linux/arm64 \
   --push .
 ```
 
+### Github Releases
+
+See [GitHub Releases](https://github.com/binhvu3/fishid/releases) for full changelog and version history.
+
+| Version | Notes |
+|---|---|
+| [v2.1.1](https://github.com/binhvu3/fishid/releases/tag/v2.1.1) | Species list page with iNaturalist photos, top-5 predictions |
+| [v2.0.0](https://github.com/binhvu3/fishid/releases/tag/v2.0.0) | EfficientNet-B4, 202 species, iNaturalist dataset |
+| v1.0.0 | EfficientNet-B0, 9 species, Kaggle dataset |
+
 ### Health Check
 
 ```bash
@@ -184,6 +195,8 @@ kill $(cat /workspace/models/training.pid)        # stop
 | GET | `/health` | Health check + model info |
 | GET | `/samples-list` | List available sample images |
 | POST | `/predict` | Predict species from uploaded image |
+| GET | `/species` | List all 202 species |
+| GET | `/species-page` | Species list UI with photos |
 
 ---
 
@@ -192,6 +205,7 @@ kill $(cat /workspace/models/training.pid)        # stop
 - 🌐 [Live Demo](https://fishid.binhtvu.com)
 - 📖 [API Docs](https://fishid.binhtvu.com/docs)
 - 🐳 [DockerHub](https://hub.docker.com/r/binhvu3/fishid)
+- 📦 [GitHub Releases](https://github.com/binhvu3/fishid/releases)
 
 ---
 
