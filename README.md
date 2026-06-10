@@ -72,6 +72,28 @@ curl -X POST "http://localhost:8000/predict" \
 
 ---
 
+## API Routes
+
+| Method | Route | Description |
+|---|---|---|
+| GET | `/` | Frontend UI |
+| GET | `/health` | Health check + model info |
+| GET | `/samples-list` | List available sample images |
+| POST | `/predict` | Predict species from uploaded image |
+| GET | `/species` | List all 202 species |
+| GET | `/species-page` | Species list UI with photos |
+
+---
+
+## Links
+
+- 🌐 [Live Demo](https://fishid.binhtvu.com)
+- 📖 [API Docs](https://fishid.binhtvu.com/docs)
+- 🐳 [DockerHub](https://hub.docker.com/r/binhvu3/fishid)
+- 📦 [GitHub Releases](https://github.com/binhvu3/fishid/releases)
+
+---
+
 ## Model History
 
 | Version | Model | Species | Val Accuracy | Dataset |
@@ -127,22 +149,24 @@ cp example.env .env  # fill in your AIStor and MLflow credentials
 uvicorn src.app:app --reload --port 8000
 ```
 
-### Download Sample Images
-
-```bash
-python src/download_samples.py
-```
-
 ### Build and Push Multi-Platform Image
 
 ```bash
 docker buildx build --platform linux/amd64,linux/arm64 \
   -t binhvu3/fishid:latest \
-  -t binhvu3/fishid:v2.0.0 \
+  -t binhvu3/fishid:v2.1.4 \
   --push .
 ```
 
 ### Github Releases
+
+```bash
+git add .
+git commit -m "update README with v2.1.4 release notes and Docker version"
+git push origin main
+git tag v2.1.5
+git push origin v2.1.5
+```
 
 See [GitHub Releases](https://github.com/binhvu3/fishid/releases) for full changelog and version history.
 
@@ -151,6 +175,12 @@ See [GitHub Releases](https://github.com/binhvu3/fishid/releases) for full chang
 | [v2.1.1](https://github.com/binhvu3/fishid/releases/tag/v2.1.1) | Species list page with iNaturalist photos, top-5 predictions |
 | [v2.0.0](https://github.com/binhvu3/fishid/releases/tag/v2.0.0) | EfficientNet-B4, 202 species, iNaturalist dataset |
 | v1.0.0 | EfficientNet-B0, 9 species, Kaggle dataset |
+
+### Download Sample Images
+
+```bash
+python src/download_samples.py
+```
 
 ### Health Check
 
@@ -184,30 +214,6 @@ cat /workspace/models/training.pid | xargs ps -p  # check running
 watch -n 1 nvidia-smi                             # GPU usage
 kill $(cat /workspace/models/training.pid)        # stop
 ```
-
----
-
-## API Routes
-
-| Method | Route | Description |
-|---|---|---|
-| GET | `/` | Frontend UI |
-| GET | `/health` | Health check + model info |
-| GET | `/samples-list` | List available sample images |
-| POST | `/predict` | Predict species from uploaded image |
-| GET | `/species` | List all 202 species |
-| GET | `/species-page` | Species list UI with photos |
-
----
-
-## Links
-
-- 🌐 [Live Demo](https://fishid.binhtvu.com)
-- 📖 [API Docs](https://fishid.binhtvu.com/docs)
-- 🐳 [DockerHub](https://hub.docker.com/r/binhvu3/fishid)
-- 📦 [GitHub Releases](https://github.com/binhvu3/fishid/releases)
-
----
 
 ## License
 
