@@ -41,3 +41,5 @@ outputs/
 # Conda
 *.conda
 environment.lock.yml
+models/*
+!models/.gitkeep
