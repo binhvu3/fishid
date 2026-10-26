@@ -33,6 +33,7 @@ app.add_middleware(
 )
 
 app.mount("/samples", StaticFiles(directory=str(BASE_DIR / "src/samples")), name="samples")
+app.mount("/media", StaticFiles(directory=str(BASE_DIR / "src/media")), name="media")
 
 # ── Load model ──
 device = torch.device("cpu")
