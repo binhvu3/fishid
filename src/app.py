@@ -4,9 +4,9 @@ import json
 import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
-from PIL import Image
+from PIL import Image, UnidentifiedImageError
 from pathlib import Path
-from fastapi import FastAPI, UploadFile, File, Request
+from fastapi import FastAPI, UploadFile, File, Request, HTTPException
 from fastapi.responses import JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
@@ -20,6 +20,8 @@ os.environ["PYTORCH_DISABLE_NNPACK"] = "1"
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+MAX_UPLOAD_BYTES = 10 * 1024 * 1024
+ALLOWED_FORMATS = ["JPEG", "PNG", "WEBP"]
 
 limiter = Limiter(key_func=get_remote_address)
 app = FastAPI(title="FishID API", docs_url=None, redoc_url=None, openapi_url=None)
@@ -80,8 +82,14 @@ def samples_list():
 @app.post("/predict")
 @limiter.limit("10/minute")
 async def predict(request: Request, file: UploadFile = File(...)):
+    if file.size is not None and file.size > MAX_UPLOAD_BYTES:
+        raise HTTPException(413, "Image too large (max 10 MB)")
     contents = await file.read()
-    img = Image.open(io.BytesIO(contents)).convert('RGB')
+    # Only decode common photo formats; Pillow's exotic decoders are where most CVEs live
+    try:
+        img = Image.open(io.BytesIO(contents), formats=ALLOWED_FORMATS).convert('RGB')
+    except (UnidentifiedImageError, Image.DecompressionBombError, OSError):
+        raise HTTPException(400, "Unsupported or invalid image (use JPEG, PNG or WebP)")
     tensor = inference_transform(img).unsqueeze(0).to(device)
 
     with torch.no_grad():

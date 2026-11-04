@@ -122,7 +122,7 @@ pandas==2.3.3
 pandocfilters @ file:///opt/miniconda3/conda-bld/pandocfilters_1756977617494/work
 parso @ file:///Users/ec2-user/croot/parso_1778674012754/work
 pexpect @ file:///opt/miniconda3/conda-bld/pexpect_1762535935939/work
-pillow @ file:///Users/ec2-user/croot/pillow_1777974295174/work
+pillow==13.0.0
 platformdirs @ file:///Users/ec2-user/croot/platformdirs_1773652975053/work
 prettytable==3.17.0
 prometheus_client @ file:///Users/ec2-user/croot/prometheus_client_1772733395814/work
@@ -145,7 +145,7 @@ PySocks @ file:///opt/miniconda3/conda-bld/pysocks_1761753010242/work
 python-dateutil @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_66ud1l42_h/croot/python-dateutil_1716495741162/work
 python-dotenv==1.2.2
 python-json-logger @ file:///opt/miniconda3/conda-bld/python-json-logger_1764590078674/work
-python-multipart==0.0.30
+python-multipart==0.0.33
 python-slugify==8.0.4
 pytz==2026.2
 PyYAML @ file:///opt/miniconda3/conda-bld/pyyaml_1763465492937/work
@@ -170,7 +170,7 @@ soupsieve @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_
 SQLAlchemy @ file:///Users/ec2-user/croot/sqlalchemy_1773755037066/work
 sqlparse==0.5.5
 stack_data @ file:///opt/miniconda3/conda-bld/stack_data_1757067039886/work
-starlette==0.52.1
+starlette==1.10.0
 sympy==1.14.0
 terminado @ file:///Users/ec2-user/croot/terminado_1769591692049/work
 text-unidecode==1.3

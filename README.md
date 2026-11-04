@@ -121,6 +121,7 @@ fishid/
 │   ├── app.py                        → FastAPI app
 │   ├── index.html                    → frontend UI
 │   ├── download_samples.py           → download sample images from iNaturalist
+│   ├── media/                        → promo video served at /media
 │   └── samples/                      → sample images served by API
 ├── models/                           → saved model checkpoints (gitignored)
 ├── outputs/                          → charts and evaluation results
@@ -151,10 +152,13 @@ uvicorn src.app:app --reload --port 8000
 
 ### Build and Push Multi-Platform Image
 
+Run from the project root on a machine that has `models/` (it is gitignored, so this can't run in CI).
+
 ```bash
+docker login
 docker buildx build --platform linux/amd64,linux/arm64 \
   -t binhvu3/fishid:latest \
-  -t binhvu3/fishid:v2.1.4 \
+  -t binhvu3/fishid:v2.1.8 \
   --push .
 ```
 
@@ -162,16 +166,18 @@ docker buildx build --platform linux/amd64,linux/arm64 \
 
 ```bash
 git add .
-git commit -m "update README with v2.1.4 release notes and Docker version"
+git commit -m "security: patch CVEs, non-root container, upload validation"
 git push origin main
-git tag v2.1.5
-git push origin v2.1.5
+git tag v2.1.8
+git push origin v2.1.8
 ```
 
 See [GitHub Releases](https://github.com/binhvu3/fishid/releases) for full changelog and version history.
 
 | Version | Notes |
 |---|---|
+| [v2.1.8](https://github.com/binhvu3/fishid/releases/tag/v2.1.8) | Security: patched starlette/python-multipart/pillow/wheel/jaraco CVEs, non-root container, upload size/format validation |
+| [v2.1.7](https://github.com/binhvu3/fishid/releases/tag/v2.1.7) | Promo video on the frontend |
 | [v2.1.1](https://github.com/binhvu3/fishid/releases/tag/v2.1.1) | Species list page with iNaturalist photos, top-5 predictions |
 | [v2.0.0](https://github.com/binhvu3/fishid/releases/tag/v2.0.0) | EfficientNet-B4, 202 species, iNaturalist dataset |
 | v1.0.0 | EfficientNet-B0, 9 species, Kaggle dataset |
