@@ -134,7 +134,7 @@ psycopg2 @ file:///Users/ec2-user/croot/psycopg2_1766163908050/work
 ptyprocess @ file:///opt/miniconda3/conda-bld/ptyprocess_1762424170819/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl#sha256=3470be7f810474c8a2ecfcd6e02acc6aea8483ab595417fa4e336362a349933e
 pure_eval @ file:///opt/miniconda3/conda-bld/pure_eval_1757067067189/work
 pyarrow==23.0.1
-pyasn1==0.6.3
+pyasn1==0.6.5
 pyasn1_modules==0.4.2
 pycparser @ file:///Users/ec2-user/croot/pycparser_1774959673631/work
 pydantic==2.13.4
