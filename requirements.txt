@@ -112,7 +112,7 @@ networkx==3.6.1
 notebook @ file:///Users/ec2-user/croot/notebook_1775139368749/work
 notebook_shim @ file:///Users/ec2-user/croot/notebook-shim_1769629836827/work
 numpy @ file:///Users/ec2-user/croot/numpy_and_numpy_base_1776188826613/work/dist/numpy-2.4.4-cp311-cp311-macosx_12_0_arm64.whl#sha256=6381819940a44fb34c161b825e5561a403c9f9bb64dc18044014be585b736f22
-opentelemetry-api==1.42.1
+opentelemetry-api==1.45.2
 opentelemetry-proto==1.42.1
 opentelemetry-sdk==1.42.1
 opentelemetry-semantic-conventions==0.63b1
